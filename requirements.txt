@@ -1,5 +1,7 @@
 pytest
 playwright
+pytest-playwright
 requests
 pytest-html
 allure-pytest
+locust
