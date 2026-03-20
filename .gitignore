@@ -5,3 +5,11 @@ report.html
 *.png
 venv/
 .env
+
+# Allure Reports
+allure-results/
+allure-report/
+
+# Playwright Test Results
+test-results/
+playwright_search_result.png
