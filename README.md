@@ -7,7 +7,7 @@
 ![Allure](https://img.shields.io/badge/Allure-Report-yellow)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ed)
 
-本项目是一个企业级自动化测试框架脚手架（Demo），包含了 **Web UI 测试**、**RESTful API 测试**、**并发性能测试** 以及配套的 **CI/CD 流水线**。旨在提供一个高可维护性、高扩展性的综合质量保障解决方案，全面对标大厂测试开发最佳实践。
+本项目是一个自动化测试框架脚手架（Demo），包含了 **Web UI 测试**、**RESTful API 测试**、**并发性能测试** 以及配套的 **CI/CD 流水线**。旨在提供一个高可维护性、高扩展性的综合质量保障解决方案。
 
 ## 🎯 核心特性 (Features)
 
