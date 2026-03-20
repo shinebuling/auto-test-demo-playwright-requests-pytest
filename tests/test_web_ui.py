@@ -1,22 +1,16 @@
-from playwright.sync_api import expect
+from pages.search_page import PlaywrightHomePage
 import pytest
 
 @pytest.mark.web
 def test_example_search(page):
-    # 换成无需应对反爬虫的官方测试页面
-    page.goto("https://playwright.dev/")
+    # 使用 POM (Page Object Model) 模式，实例化页面类
+    home_page = PlaywrightHomePage(page)
     
-    # 验证页面标题
-    expect(page).to_have_title("Fast and reliable end-to-end testing for modern web apps | Playwright")
+    # 导航并验证标题
+    home_page.navigate()
     
-    # 点击搜索框
-    page.click(".DocSearch-Button")
-    
-    # 输入并搜索
-    page.fill(".DocSearch-Input", "Python")
-    
-    # 验证搜索结果出现
-    page.wait_for_selector(".DocSearch-Dropdown")
+    # 执行搜索
+    home_page.search("Python")
     
     # 截图验证
     page.screenshot(path="playwright_search_result.png")
