@@ -1,5 +1,9 @@
 import pytest
+import allure
 
+@allure.feature("API 接口测试")
+@allure.story("Posts 模块")
+@allure.title("批量测试获取文章详情接口 (Data-Driven)")
 @pytest.mark.api
 @pytest.mark.parametrize("post_id, expected_user_id, expected_status", [
     (1, 1, 200),
@@ -21,6 +25,9 @@ def test_get_post(api_session, base_url, post_id, expected_user_id, expected_sta
         assert data["id"] == post_id
         assert isinstance(data["id"], int)
 
+@allure.feature("API 接口测试")
+@allure.story("Posts 模块")
+@allure.title("批量测试创建文章接口 (Data-Driven)")
 @pytest.mark.api
 @pytest.mark.parametrize("payload, expected_status", [
     ({"title": "hello", "body": "world", "userId": 1}, 201),

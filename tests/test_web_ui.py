@@ -1,6 +1,10 @@
+import allure
 from pages.search_page import PlaywrightHomePage
 import pytest
 
+@allure.feature("Web UI 测试")
+@allure.story("Playwright 官网主页")
+@allure.title("验证首页搜索功能是否正常呈现下拉结果")
 @pytest.mark.web
 def test_example_search(page):
     # 使用 POM (Page Object Model) 模式，实例化页面类
